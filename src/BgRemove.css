@@ -1,0 +1,46 @@
+.bg_div_cont{
+    text-align: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 110px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px black;
+    background-color: #222A34;
+}
+.bg_div_header{
+    position: relative;
+}
+.bg_div_header_title{
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+.bg_div_header_button{
+background-color: #475366;
+border: 0;
+color: white;
+width: 120px;
+height: 25px;
+border-radius: 25px;
+float: left;
+margin-left: 20px;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABvSURBVHgBzZHLDYAwDEMdxJ2OABswAiOwASuxAYzUTWCDYm4QEUR6oU+yqsh1PwlQFCmlHl4YmqmNmp782giNXFaqoTrWQUR2OG5dLK9CJtnBG3xa66mvhvkn7euuBpoDPiDqxHMM4WV/5FgifuEAcREype6WR6sAAAAASUVORK5CYII=);
+background-repeat: no-repeat;
+background-position: 5px 6px;
+}
+.bg_div_header_subtext{
+    text-align: left;
+    color: white;
+    padding-left: 160px;
+    width: 318px;
+}
+.close1_img{
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+}
