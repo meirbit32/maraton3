@@ -1,7 +1,16 @@
+@font-face {
+    font-family: "Aduma";     
+    src: url("./assets/fonts/Aduma\ Regular.ttf");
+  }
+
+body{
+    font-family: 'Aduma';
+}
+
 .bg_div_cont{
     text-align: center;
     width: 800px;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     margin-top: 110px;
     border-radius: 25px;
@@ -43,4 +52,96 @@ background-position: 5px 6px;
     top: 10px;
     width: 15px;
     height: 15px;
+}
+.main_left{
+    width: 68%;
+    float: left;
+    height: 445px;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: #2F3A4B;
+    
+}
+.main_right{
+    width: 29%;
+    float: right;
+    height: 445px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #2F3A4B;
+
+}
+
+.main_cont{
+    clear: both;
+    margin-top: 10px;
+}
+
+.middle_div_left{
+    height: 345px;
+    margin-top: 44px;
+    background-color: #161B21;
+}
+
+.middle_div_right{
+    height: 345px;
+    margin-top: 44px;
+    background-color: #161B21;
+}
+
+.logo{
+    float: left;
+    margin: 22px;
+}
+
+.banner{
+    float: right;
+    margin: 18px;
+}
+
+.tab_button_no_bg, .tab_button_original{
+    color: white;
+    width: 100px;
+    float: right;
+    position: relative;
+    top: -25px;
+    top: -30px;
+}
+
+.tab_button_no_bg{
+    background-image: url('./assets/Cleanup\ Edges.png');
+    background-repeat: no-repeat;
+    background-position: 70px 4px;
+    border-bottom: 3px solid #9c27b0;
+    padding-bottom: 8px;
+}
+
+.tab_button_original{
+    background-image: url('./assets/Image.png');
+    background-repeat: no-repeat;
+    background-position: 65px 4px;
+    padding-bottom: 8px;
+}
+
+.main_left_footer_text{
+    color: #ffffff85;
+    font-size: 14px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px; 
+}
+.main_left_footer_button{
+    float: left;
+    margin-top: -32px;
+    margin-left: 20px;
+    background-color: #475366;
+    border: 0;
+    color: white;
+    width: 140px;
+    height: 25px;
+    border-radius: 25px;
+    background-image: url('./assets/eula.png');
+    background-repeat: no-repeat;
+    background-position: 9px  7px;
+    padding-left: 20px;
 }
