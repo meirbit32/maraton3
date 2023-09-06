@@ -3,7 +3,7 @@ import { useState } from 'react';
 import newImage from './assets/new.png'
 
 function DownloadImg(props) {
-  const [border, setborder] = useState(props.borderFlag);
+  // const [border, setborder] = useState(props.borderFlag);
   return (
         <div className="DownloadImg_cont" style={{borderBottom : ( border?  "1px solid #9e9e9ea8" : "")}}>
             <div className="DownloadImg_title" > {props.title} 

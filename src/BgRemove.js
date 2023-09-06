@@ -6,6 +6,7 @@ import DownloadImg from './DownloadImg';
 import {useState} from 'react';
 
 function BgRemove() {
+  
   const [tabname, settabname] = useState('no_bg');
   function tab_click() {
     settabname('original');
@@ -25,7 +26,7 @@ function BgRemove() {
             <div className='main_left'>
                 <div className='middle_div_left'>
                     <div className='tab_button_no_bg' onClick={tab_click}> הוסר רקע </div>
-                    <div className='tab_button_original'> מקורי </div>
+                    <div className='tab_button_original' onClick={tab_click}> מקורי </div>
                 </div>
                 <div className='main_left_footer'>
                     <div className='main_left_footer_text'> על ידי העלאת תמונה אתה מסכים לתנאים וההגבלות . </div>
