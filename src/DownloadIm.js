@@ -1,11 +1,11 @@
-import './DownloadImg.css'
+import './DownloadIm.css'
 import { useState } from 'react';
 import newImage from './assets/new.png'
 
-function DownloadImg(props) {
+function DownloadIm(props) {
   // const [border, setborder] = useState(props.borderFlag);
   return (
-        <div className="DownloadImg_cont" style={{borderBottom : ( border?  "1px solid #9e9e9ea8" : "")}}>
+        <div className="DownloadImg_cont" style={{borderBottom : ( props.border ?  "1px solid #9e9e9ea8" : "")}}>
             <div className="DownloadImg_title" > {props.title} 
             {props.newImage ? <img className="newImg" src={newImage} /> : ""}
             </div>
@@ -15,4 +15,4 @@ function DownloadImg(props) {
         </div>
   )}
 
-  export default DownloadImg
+  export default DownloadIm

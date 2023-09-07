@@ -112,8 +112,9 @@ background-position: 5px 6px;
     background-image: url('./assets/Cleanup\ Edges.png');
     background-repeat: no-repeat;
     background-position: 70px 4px;
-    border-bottom: 3px solid #9c27b0;
+    /* border-bottom: 3px solid #9c27b0; */
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .tab_button_original{
@@ -121,6 +122,7 @@ background-position: 5px 6px;
     background-repeat: no-repeat;
     background-position: 65px 4px;
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .main_left_footer_text{
