@@ -39,6 +39,7 @@ margin-left: 20px;
 background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABvSURBVHgBzZHLDYAwDEMdxJ2OABswAiOwASuxAYzUTWCDYm4QEUR6oU+yqsh1PwlQFCmlHl4YmqmNmp782giNXFaqoTrWQUR2OG5dLK9CJtnBG3xa66mvhvkn7euuBpoDPiDqxHMM4WV/5FgifuEAcREype6WR6sAAAAASUVORK5CYII=);
 background-repeat: no-repeat;
 background-position: 5px 6px;
+cursor: pointer;
 }
 .bg_div_header_subtext{
     text-align: left;
@@ -146,4 +147,33 @@ background-position: 5px 6px;
     background-repeat: no-repeat;
     background-position: 9px  7px;
     padding-left: 20px;
+}
+.file_input{
+    display: none;
+}
+
+.takanon_popup{
+    width: 500px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 40px;
+    position: relative;
+    top: -400px;
+    margin: 0 auto;
+    
+}
+.takanon_popup_overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #000000a3;
+    position: absolute;
+    top: 0;
+}
+
+.close_popup_img{
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    
 }
