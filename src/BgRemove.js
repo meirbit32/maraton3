@@ -104,6 +104,21 @@ function close_popup(){
         </div></>
     : "" }
 
+          <div className='download_popup'>
+            <div className='top_img'>
+            </div>
+            <div className='download_popup_title'>אישור להורדת תמונה</div>
+            <div className='download_popup_subtitle'>האם להוריד את התמונה ?  </div>
+                
+                <div className='not_robot_cont'>
+                  <span className='download_popup_not_robot'>אני לא רובוט </span>
+                  <input className='download_popup_checkbox' type="checkbox" />
+                </div>
+            
+            <button className='download_popup_cancel'> ביטול </button>
+            <button className='download_popup_approve'> אישור </button>
+          </div>
+
     </div>
   );
 }

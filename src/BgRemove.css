@@ -175,5 +175,75 @@ cursor: pointer;
     position: absolute;
     top: 17px;
     left: 20px;
+    cursor: pointer;
     
+}
+
+.download_popup{
+    background-color: white;
+    border: 1px solid black;
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    top: -376px;
+    height: 207px;
+}
+
+.top_img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 222px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #9c27b080;
+}
+
+.download_popup_title{
+position: absolute;
+top: 34px;
+text-align: center;
+width: 100%;
+font-size: 40px;
+color: #1d2e8d;
+}
+
+.download_popup_subtitle{
+    position: absolute;
+    top: 85px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    direction: rtl;
+    color: #1d2e8d;
+}
+
+.not_robot_cont{
+    position: absolute;
+    top: 126px;
+    right: 107px;
+    color: #1d2e8d;
+}
+.download_popup_cancel{
+    position: absolute;
+    top: 153px;
+    right: 67px;
+    width: 161px;
+    height: 39px;
+    border: 1px solid #00000063;
+    border-radius: 25px;
+    background: transparent;
+    color: black;
+    }
+.download_popup_approve{
+    position: absolute;
+    top: 153px;
+    right: 246px;
+    width: 161px;
+    height: 39px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(95deg,#b423cd,#1198d5);
 }
