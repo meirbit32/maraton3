@@ -247,3 +247,24 @@ color: #1d2e8d;
     color: white;
     background: linear-gradient(95deg,#b423cd,#1198d5);
 }
+.DownloadFolder{
+    position: absolute;
+    top: 8px;
+    right: 7px;
+}
+.close1_img_popup{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.not_robot{
+    position: relative;
+    left: -8px;
+
+}
+.error{
+    color: red;
+    position: absolute;
+    left: 200px;
+    top: 71px;
+}

@@ -4,7 +4,7 @@ import newImage from './assets/new.png'
 
 function DownloadIm(props) {
   function open_download_popup(){
-
+      props.show_popup()
   }
 
   return (

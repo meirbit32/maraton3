@@ -1,15 +1,24 @@
 import './BgRemove.css';
 import { useState, useRef } from 'react';
 import DownloadIm from './DownloadIm';
+import axios from 'axios'
 import Image from './Image'
 import logo from './assets/logo.png'
 import banner from './assets/banner.png'
 import close from './assets/close.png'
+import DownloadFolder from './assets/Downloads Folder.png'
+import close1 from './assets/close1.png'
+import not_robot from './assets/not_robot.png'
+
 
 function BgRemove() {
   
   const [tabname, settabname] = useState('no_bg');
   const [open_poup, setopen_popup] = useState(false);
+
+  const [open_poup_download, setopen_popup_download] = useState(false);
+
+  const [show_error, setshow_error] = useState(false);
 
   const inputFileElement = useRef()
 
@@ -26,12 +35,39 @@ function BgRemove() {
 }}
 
 
-function open_popup (){
-  setopen_popup(true)
-}
+  function open_popup (){
+    setopen_popup(true)
+  }
 
-function close_popup(){
-  setopen_popup(false)
+  function close_popup(){
+    setopen_popup(false)
+  }
+
+    function show_popup_func(){
+      setopen_popup_download(true)
+    }
+
+    function send_to_server(e){
+      let file = e.target.files[0];
+    
+    if(file.type == "image/png" || file.type == "image/jpeg" ){ 
+      setshow_error(false);
+
+      let formData = new FormData();
+      formData.append("UploadFile", file);
+
+      let headers = {
+        "content-Type" : "multipart/form-data"
+      }
+
+      axios.post('http://localhost:5000/upload_img', formData, headers)
+        .then(res => {
+            console.log(res)
+                      })
+      }
+    else{
+      setshow_error(true);
+        }
 }
 
   return (
@@ -41,8 +77,9 @@ function close_popup(){
             <img src={close} className='close1_img'/>
             <div className='bg_div_header_title'> העלאת תמונה כדי להסיר את הרקע</div>
             <button className='bg_div_header_button' onClick={focusInput}> העלאת תמונה</button>
-            <input type='file' ref={inputFileElement} className='file_input'></input>
+            <input type='file' ref={inputFileElement} onChange={send_to_server} className='file_input'></input>
             <div className='bg_div_header_subtext'> פורמטים נתמכים png, jpeg</div>
+            {show_error ? <div className='error'> קובץ לא נתמך </div> : "" }
             </div>
 
         <div className='main_cont'>
@@ -68,6 +105,7 @@ function close_popup(){
             <div className='main_right'>
                 <div className='middle_div_right'>
                   <DownloadIm 
+                  show_popup={show_popup_func}
                   title="תמונה חינם"
                   subtitle=" 612x408 תצוגה מקדימה של תמונה   "
                   btnText="הורד"
@@ -104,21 +142,25 @@ function close_popup(){
         </div></>
     : "" }
 
+
+        {open_poup_download ? 
+           
           <div className='download_popup'>
+          <img src={close1} className='close1_img_popup' onClick={()=>setopen_popup_download(false)}/>
             <div className='top_img'>
+              <img src={DownloadFolder} className='DownloadFolder'/>
             </div>
             <div className='download_popup_title'>אישור להורדת תמונה</div>
-            <div className='download_popup_subtitle'>האם להוריד את התמונה ?  </div>
-                
+            <div className='download_popup_subtitle'>האם להוריד את התמונה ?  </div>                
                 <div className='not_robot_cont'>
+                  <img src={not_robot} className='not_robot'/>
                   <span className='download_popup_not_robot'>אני לא רובוט </span>
                   <input className='download_popup_checkbox' type="checkbox" />
-                </div>
-            
+                </div>            
             <button className='download_popup_cancel'> ביטול </button>
-            <button className='download_popup_approve'> אישור </button>
+            <button className='download_popup_approve'> אישור </button> 
           </div>
-
+            : "" }
     </div>
   );
 }
