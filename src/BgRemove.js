@@ -68,7 +68,7 @@ function BgRemove() {
     else{
       setshow_error(true);
         }
-}
+  }
 
   return (
     <div >
