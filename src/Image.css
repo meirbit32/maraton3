@@ -45,8 +45,17 @@
     .image_place{
         border: 1px solid white;
         height: 294px;
+        position: relative;
     }
     .image_only_disp{
-        top: 56px;
+        top: 18px;
         position: relative;
+        overflow: auto;
+        width: 100%;
+    }
+    .uploded_img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
     }

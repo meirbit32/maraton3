@@ -36,7 +36,9 @@ function Image(props) {
                 </>
                 : ''}
                 <div className={`image_place ${image_only_disp}`}>
-
+                    {props.upload_img_name  && props.upload_img_name!= "no_bg_false" ?
+                    <img className='uploded_img' src={'http://localhost:5000/'+props.upload_img_name} />
+                    : "" }
                 </div>
 
                </div>
