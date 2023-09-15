@@ -15,15 +15,11 @@ function BgRemove() {
   
   const [tabname, settabname] = useState('no_bg');
   const [open_poup, setopen_popup] = useState(false);
-
   const [open_poup_download, setopen_popup_download] = useState(false);
-
   const [show_error, setshow_error] = useState(false);
-
   const [upload_img_name, setupload_img_name] = useState(false);
-  
+  const [colorexist, setcolorexist] = useState(false);
   const inputFileElement = useRef()
-
   const focusInput = () =>{
     inputFileElement.current.click()
   }
@@ -73,6 +69,9 @@ function BgRemove() {
       setshow_error(true);
         }
   }
+    function color_exist(){
+          setcolorexist(true);
+    }
 
   return (
     <div >
@@ -93,7 +92,7 @@ function BgRemove() {
                     <div className='tab_button_original' style={{borderBottom : (tabname == 'original' ? "3px solid #9c27b0": "")}} onClick={tab_click}> מקורי </div>
                   
                   { tabname== "no_bg" ?   
-                    <Image image_only={false} upload_img_name={"no_bg_"+upload_img_name}/>
+                    <Image  image_only={false} upload_img_name={(colorexist ? "color_" : "") +"no_bg_"+upload_img_name} color_func={color_exist}/>
                    :
                     <Image image_only={true} upload_img_name={upload_img_name}/>
                   }
