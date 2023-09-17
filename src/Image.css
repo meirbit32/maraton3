@@ -59,3 +59,19 @@
         left: 0;
         width: 100%;
     }
+    .loader{
+        width: 50%;
+        border: 1px solid #ffffff5c;
+        height: 20px;
+        margin: 0 auto;
+        top: -166px;
+        position: relative;
+    }
+    
+    
+    .loader_in{
+        width: 39%;
+        float: left;
+        background: linear-gradient(249deg,#2196F3,#673AB7);
+        color: white;
+    }
