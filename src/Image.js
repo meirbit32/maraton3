@@ -26,6 +26,7 @@ function Image(props) {
         } else
         setimage_only_disp('')
     },[props.image_only]);
+    
     const inputElement =useRef();
     
     const focusInput = ()=>{
@@ -34,12 +35,14 @@ function Image(props) {
 
     function color_change (e){
         setcolor(e.target.value)
+        
     }
 
     function color_choose_func(e){
-
+        
         if(upload_img_name && upload_img_name!="no_bg_false") {
             setshow_loader(true);
+            
             console.log(e.target.value);
 
             let formData = new FormData();
@@ -69,12 +72,14 @@ function Image(props) {
                 <div className='color_btn' onClick={focusInput}> צבע רקע 
                 <span className='color_choos' style={{backgroundColor : color}}></span>
                 </div>
-                <input type='color' ref={inputElement} className='input_color' onChange={color_change} onBlur={color_choose_func}/>
+                <input type="color" ref={inputElement} className="input_color" onChange={color_change} onBlur={color_choose_func}/>
                 </>
+                
                 : ''}
                 <div className={`image_place ${image_only_disp}`}>
-                    {props.upload_img_name  && props.upload_img_name!= "no_bg_false" && props.upload_img_name!="color_no_bg_false" ?
-                    <img className='uploded_img' src={'http://localhost:5000/'+props.upload_img_name} />
+                    {upload_img_name  && upload_img_name!= "no_bg_false" && upload_img_name!="color_no_bg_false" ?
+                    
+                    <img className='uploded_img' src={'http://localhost:5000/'+ upload_img_name} />
                     : "" }
                 </div>
                     
